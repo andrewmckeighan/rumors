@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void readInput(){
+		Scanner scan = new Scanner(System.in);
+		String line = "";
+		while (scan.hasNextLine()) {
+			line = scan.nextLine();
+			while(line.equals("")){
+				line = scan.nextLine();
+			}
+		}
+		scan.close();
+	}
+}
