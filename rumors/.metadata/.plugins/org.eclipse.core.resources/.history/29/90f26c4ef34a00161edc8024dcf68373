@@ -107,11 +107,6 @@ public class Main {
 		findBestRoute(arr, size);
 	}
 	
-	/**
-	 * Finds the best route for the stockbroker to take.
-	 * @param arr the matrix after being sorted by Floyd-Warshall Algorithm.
-	 * @param size the size of matrix.
-	 */
 	public static void findBestRoute(int arr[][], int size){
 		int min = 11;
 		int max = 0;
