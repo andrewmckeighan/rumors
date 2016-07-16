@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String read = "";
+		Scanner scan = new Scanner(System.in);
+		readInput(scan, read);
+	}
+
+	public static void readInput(Scanner scan, String line){
+		while (scan.hasNextLine()) {
+			line = scan.nextLine();
+			while(line.equals("")){
+				line = scan.nextLine();
+			}
+			if(Integer.parseInt(line) == 0){
+				break;
+			}
+			storeMatrix(Integer.parseInt(line), scan);
+		}
+		scan.close();
+	}
+
+	public static void storeMatrix(int size, Scanner scan) {
+		int arr[][] = new int[size][size];
+		for(int i = 0; i<size; i++){
+			for(int j = 0; j<size; j++){
+				arr[i][j] = 11;
+			}
+		}
+		String line = scan.nextLine();
+		StringTokenizer st = new StringTokenizer(line);
+		int contacts;
+		int temp;
+		for(int i = 0; i < size; i++){
+			contacts = Integer.parseInt(st.nextToken());
+			for(int j = 0; j<contacts; j++){
+				arr[i][Integer.parseInt(st.nextToken())] = Integer.parseInt(st.nextToken());
+			}
+			if(i<size-1){
+				line = scan.nextLine();
+			}
+		}
+		
+		
+	}
+}
