@@ -15,19 +15,7 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		readInput(scan, read);
 	}
-	/**
-	 * Basically reads the first line for each set of brokers.
-	 * For the example given:
-	 * 3 <<<----------
-	 * 2 2 4 3 5
-	 * 2 1 2 3 6
-	 * 2 1 2 2 2
-	 * 5 <<<----------
-	 * ... and so on, it will read the numbers 3, 5 and the 0 at the end.
-	 * 
-	 * @param scan = A scanner.
-	 * @param line = The line read by the scanner.
-	 */
+
 	public static void readInput(Scanner scan, String line){
 		while (scan.hasNextLine()) {
 			line = scan.nextLine();
@@ -77,24 +65,7 @@ public class Main {
 				line = scan.nextLine();
 			}
 		}
-		floydWarshall(arr, size);
+		
 		
 	}
-	
-	public static void floydWarshall(int arr[][], int size){
-		int i, j;
-		int k;
-		int through_k;
-		for(k=0; k<size; k++){
-			for(i=0; i<size; i++){
-				for(j=0; j<size; j++){
-					through_k = arr[i][k]+arr[k][j];
-					if(through_k < arr[i][j]){
-						arr[i][j] = through_k;
-					}
-				}
-			}
-		}
-	}
 }
-

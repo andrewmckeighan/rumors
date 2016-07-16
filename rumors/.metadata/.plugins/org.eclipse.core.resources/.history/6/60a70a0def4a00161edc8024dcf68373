@@ -85,9 +85,9 @@ public class Main {
 		int i, j;
 		int k;
 		int through_k;
-		for(k=0; k<size; k++){
-			for(i=0; i<size; i++){
-				for(j=0; j<size; j++){
+		for(k=0; k<=size; k++){
+			for(i=0; i<=size; i++){
+				for(j=0; j<=size; j++){
 					through_k = arr[i][k]+arr[k][j];
 					if(through_k < arr[i][j]){
 						arr[i][j] = through_k;
